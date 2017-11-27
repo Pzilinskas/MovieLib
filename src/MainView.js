@@ -10,7 +10,7 @@ class MainView extends Component {
        <Router>
         <div>
           <Route exact path="/" component={HomePage}/>
-          <Route path="movie/:id" component={MoviePage} />
+          <Route path="/movie/:id" component={MoviePage} />
         </div>
       </Router>
     );

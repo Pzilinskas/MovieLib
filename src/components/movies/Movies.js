@@ -17,7 +17,6 @@ class Movies extends Component {
   }
   getApi(url) {
     fetch(url).then((res) => res.json()).then((data) => {
-      // update state with API data
       this.setState({movies:data.results })
     }).catch((err) => console.log('Movie not found!'))
   }
