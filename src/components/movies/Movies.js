@@ -35,10 +35,14 @@ class Movies extends Component {
     return (
       <div className="Movies row">
        {this.state.movies.map(movie => 
-        <div className="col-sm-3" key={movie.id}>
+        <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
+          <div className="wrapper">
           <img src={'https://image.tmdb.org/t/p/w500/' + movie.poster_path } />
-          <h2>{movie.original_title}</h2>
-          <Link to={'movie/'+ movie.id}>Read More</Link>
+            <div className="details">
+              <h2>{movie.original_title}</h2>
+              <Link to={'movie/'+ movie.id}>Read More</Link>
+            </div>
+          </div>
         </div>
       )}
       </div>

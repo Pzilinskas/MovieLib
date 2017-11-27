@@ -107,7 +107,7 @@ class MoviePage extends Component {
               </div>
               {castMembers}
           </div>
-      <Footer />
+          <Footer />
       </div>
     </div>
     );
