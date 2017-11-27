@@ -1,0 +1,41 @@
+img{
+    max-width: 100%;
+}
+.movie-details{
+    padding: 30px 0;
+}
+h2.title{
+    text-align: left;
+    padding-bottom:5px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid #725AC1;
+}
+h2.section-title{
+    text-align: center;
+}
+
+ul.genres-list{
+    padding:0;
+}
+ul.genres-list li{
+    list-style: none;
+    display: inline-block;
+    margin-right:10px;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    font-weight:bold;
+    color: #FFFFFF;
+    background-color: #725AC1;
+    border-radius: 10px;
+}
+.movie-details{
+    background-color: #CAC4CE;
+}
+.cast-section{
+    padding-top: 20px;
+    padding-bottom:20px;
+    background-color: #F7ECE1;
+}
+.cast-section h2{
+    padding-bottom:20px;
+}

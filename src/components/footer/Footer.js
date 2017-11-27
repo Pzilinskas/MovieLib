@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <p className="App-intro">
-          Footer
+          MovieLib - API provided by <a href="https://www.themoviedb.org/" target="_top">The Movie DB</a>
         </p>
       </div>
     );

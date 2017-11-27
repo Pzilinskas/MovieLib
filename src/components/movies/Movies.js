@@ -38,7 +38,6 @@ class Movies extends Component {
         <div className="col-sm-3" key={movie.id}>
           <img src={'https://image.tmdb.org/t/p/w500/' + movie.poster_path } />
           <h2>{movie.original_title}</h2>
-          <p>{movie.overview}</p>
           <Link to={'movie/'+ movie.id}>Read More</Link>
         </div>
       )}
