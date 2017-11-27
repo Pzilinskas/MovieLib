@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Movies.css';
 
@@ -17,7 +18,7 @@ class Movies extends Component {
   getApi(url) {
     fetch(url).then((res) => res.json()).then((data) => {
       // update state with API data
-      this.setState({movies:data })
+      this.setState({movies:data.results })
     }).catch((err) => console.log('Movie not found!'))
   }
 
@@ -31,11 +32,17 @@ class Movies extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="Movies row">
-        <div className="col-sm-3">
-            <Movie data="{this.state}" />
+       {this.state.movies.map(movie => 
+        <div className="col-sm-3" key={movie.id}>
+          <img src={'https://image.tmdb.org/t/p/w500/' + movie.poster_path } />
+          <h2>{movie.original_title}</h2>
+          <p>{movie.overview}</p>
+          <Link to={'movie/'+ movie.id}>Read More</Link>
         </div>
+      )}
       </div>
     );
   }

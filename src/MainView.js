@@ -8,10 +8,10 @@ class MainView extends Component {
   render() {
     return (
        <Router>
-        <Switch>
+        <div>
           <Route exact path="/" component={HomePage}/>
-          <Route path="movie/*" component={MoviePage} />
-        </Switch>
+          <Route path="movie/:id" component={MoviePage} />
+        </div>
       </Router>
     );
   }
