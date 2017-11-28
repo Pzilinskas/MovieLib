@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Toolbar from '../../components/toolbar/Toolbar';
-import SearchBar from '../../components/searchBar/SearchBar';
 import Footer from '../../components/footer/Footer';
 
 import './SearchResults.css';
@@ -49,7 +48,7 @@ class SearchResults extends Component {
                         <div className="col-sm-12">
                             <h2 className="section-title">Searching for {this.props.match.params.searchTerm} </h2>
                         </div>
-                        {this.state.movies != 0?
+                        {this.state.movies !== 0?
                             this.state.movies.map(movie =>
                             <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
                                 <div className="wrapper">

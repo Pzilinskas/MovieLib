@@ -5,7 +5,6 @@ import './Movies.css';
 
 import config from '../../config';
 
-import Movie from './movie/Movie';
 
 class Movies extends Component {
 
