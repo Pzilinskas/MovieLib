@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './MoviePage.css';
 
 import Toolbar from '../../components/toolbar/Toolbar';
@@ -20,7 +21,6 @@ class MoviePage extends Component {
     fetch(url).then((res) => res.json()).then((data) => {
       this.setState({movie:data })
       this.setState({genres:data.genres})
-      console.log(data);
     }).catch((err) => console.log('Movie not found!'))
   }
 
@@ -56,6 +56,11 @@ class MoviePage extends Component {
       <div className="MoviePage">
       <div className="container-fluid">
       <Toolbar />
+    <div className="row nav-btn">
+        <div className="col-sm-12">
+            <Link className="btn btn-primary" to="/">Go Back</Link>
+        </div>
+    </div>
         <div className="row movie-details">
           <div className="col-sm-4">
           <img src={'https://image.tmdb.org/t/p/w500/' + this.state.movie.poster_path } alt="{this.state.movie.original_title}"/>

@@ -12,12 +12,14 @@ class Movies extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      movieCount: 0,
       movies: []
     }
   }
   getApi(url) {
     fetch(url).then((res) => res.json()).then((data) => {
       this.setState({movies:data.results })
+      this.setState({movieCount: data.total_results})
     }).catch((err) => console.log('Movie not found!'))
   }
 
@@ -31,9 +33,14 @@ class Movies extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="Movies row">
+          <div className="col-sm-12">
+              <p><strong>Number of movies in database:</strong>{this.state.movieCount}</p>
+          </div>
+          <div className="col-sm-12">
+              <h2 className="section-title">Popular Movies</h2>
+          </div>
        {this.state.movies.map(movie => 
         <div className="col-lg-3 col-md-4 col-sm-6" key={movie.id}>
           <div className="wrapper">

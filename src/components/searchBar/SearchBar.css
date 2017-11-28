@@ -1,0 +1,15 @@
+.SearchBar{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.SearchBar input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #242038;
+}
+.SearchBar input[type="submit"]{
+    background-color: #725AC1;
+    color: #FFF;
+    padding:5px 10px;
+}
